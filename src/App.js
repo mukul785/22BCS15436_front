@@ -36,7 +36,7 @@ function App() {
 
     try {
       const parsedJson = JSON.parse(jsonInput);
-      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/bfhl`, parsedJson);
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}bfhl`, parsedJson);
       setApiResponse(response.data);
     } catch (err) {
       setError('Failed to fetch data from the API.');
